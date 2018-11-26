@@ -1,0 +1,285 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          Adding Branches
+        </div>
+        <div class="card-body">
+            <form [formGroup]="form" >
+
+                <div class="form-group" [ngClass]="displayFieldCss('branchid')">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-vcard"></i></span>
+                      </div>
+                      <input type="text" formControlName="branchid" class="form-control"  placeholder="BRANCE ID" formControlName="branchid" tabindex="1">
+                      <app-field-error-display [displayError]="isFieldValid('branchid')" errorMsg="Enter branchid">
+                      </app-field-error-display>
+                    </div>
+                  </div>
+            <div class="form-group" [ngClass]="displayFieldCss('bname')">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-vcard"></i></span>
+                </div>
+                <input type="text" formControlName="bname" class="form-control"  placeholder="BRANCE NAME" formControlName="bname" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('bname')" errorMsg="Enter bname">
+                </app-field-error-display>
+              </div>
+            </div>
+
+           
+            <div class="form-group">
+              <div class="input-group" [ngClass]="displayFieldCss('sname')">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-book"></i></span>
+                </div>
+                <input type="text" formControlName="sname" class="form-control" placeholder="SHORT NAME " formControlName="sname" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('sname')" errorMsg="Enter sname ">
+                </app-field-error-display>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group" [ngClass]="displayFieldCss('address')">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-book"></i></span>
+                </div>
+                <input type="text" formControlName="address" class="form-control" placeholder="ADDRESS " formControlName="address" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('address')" errorMsg="Enter address ">
+                </app-field-error-display>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group" [ngClass]="displayFieldCss('gst_num')">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-book"></i></span>
+                </div>
+                <input type="text" formControlName="gst_num" class="form-control" placeholder="GST_NUM " formControlName="gst_num" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('gst_num')" errorMsg="Enter gst_num ">
+                </app-field-error-display>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group" [ngClass]="displayFieldCss('shop_logo')">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-book"></i></span>
+                </div>
+                <input type="text" formControlName="shop_logo" class="form-control" placeholder="SHOP_LOGO " formControlName="shop_logo" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('shop_logo')" errorMsg="Enter shop_logo ">
+                </app-field-error-display>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group" [ngClass]="displayFieldCss('pan_num')">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-book"></i></span>
+                </div>
+                <input type="text" formControlName="pan_num" class="form-control" placeholder="PAN_NUM " formControlName="pan_num" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('pan_num')" errorMsg="Enter pan_num ">
+                </app-field-error-display>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group" [ngClass]="displayFieldCss('phone1')">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-book"></i></span>
+                </div>
+                <input type="text" formControlName="phone1" class="form-control" placeholder="PHONE 1 " formControlName="phone1" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('phone1')" errorMsg="Enter phone1 ">
+                </app-field-error-display>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group" [ngClass]="displayFieldCss('phone2')">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-book"></i></span>
+                </div>
+                <input type="text" formControlName="phone2" class="form-control" placeholder="PHONE 2 " formControlName="phone2" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('phone2')" errorMsg="Enter phone2 ">
+                </app-field-error-display>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group" [ngClass]="displayFieldCss('email1')">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-book"></i></span>
+                </div>
+                <input type="email" formControlName="email1" class="form-control" placeholder="EMAIL ONE " formControlName="email1" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('email1')" errorMsg="Enter email1 ">
+                </app-field-error-display>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="input-group" [ngClass]="displayFieldCss('email2')">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-book"></i></span>
+                  </div>
+                  <input type="email" formControlName="email2" class="form-control" placeholder="EMAIL TWO " formControlName="email2" tabindex="1">
+                  <app-field-error-display [displayError]="isFieldValid('email1')" errorMsg="Enter email1 ">
+                  </app-field-error-display>
+                </div>
+              </div>
+
+            
+
+            <div class="form-group">
+              <div class="input-group" [ngClass]="displayFieldCss('shop_num')">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-book"></i></span>
+                </div>
+                <input type="text" formControlName="shop_num" class="form-control" placeholder="BRANCH CODE " formControlName="shop_num" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('shop_num')" errorMsg="Enter shop_num ">
+                </app-field-error-display>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group" [ngClass]="displayFieldCss('owner_id')">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fa fa-book"></i></span>
+                </div>
+                <input type="text" formControlName="owner_id" class="form-control" placeholder="OWNER ID " formControlName="owner_id" tabindex="1">
+                <app-field-error-display [displayError]="isFieldValid('owner_id')" errorMsg="Enter owner_id ">
+                </app-field-error-display>
+              </div>
+            </div>
+
+
+            <div class="form-group form-actions">
+              <button type="submit" (click)="onSubmit()" class="btn btn-pill btn-success">Submit</button> &nbsp;
+              <button type="reset" class="btn btn-pill btn-danger">Reset </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-sm-8">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Display Curriculum
+        </div>
+        <div class="card-body">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>Curriculum ID</th>
+                <th>Curriculum Name</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let dis of display1">
+               
+                <td>{{dis.cid}}</td>
+                <td>{{dis.curriculumName}}</td>
+                <td>
+
+                  <button mat-icon-button (click)="openDialog(dis)" color="primary">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+
+                </td>
+                <td>
+                  <button mat-icon-button color="warn" (click)="deleteCurriculum(dis._id)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChanged($event)">
+          </mat-paginator>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <i class="fa fa-align-justify"></i> <strong> Display Curriculum</strong>
+      
+            <mat-form-field style="float :right;width: 200px;">
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+          </div>
+          <div>
+      
+      
+            <div class="mat-elevation-z8">
+              <table mat-table style="width: 100%;" [dataSource]="dataSource" matSort>
+      
+               
+                <ng-container matColumnDef="bname">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Branch Name </th>
+                  <td mat-cell *matCellDef="let row"> {{row.bname}} </td>
+                </ng-container>
+      
+               
+                <ng-container matColumnDef="sname">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Short Name  </th>
+                  <td mat-cell *matCellDef="let row"> {{row.sname}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="address">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Address  </th>
+                  <td mat-cell *matCellDef="let row"> {{row.address}} </td>
+                </ng-container>
+      
+                  
+      
+                <ng-container matColumnDef="edit">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Edit </th>
+                  <td mat-cell *matCellDef="let row">
+                    <button mat-icon-button color="primary" (click)="openDialog(row)">
+                      <mat-icon>edit</mat-icon>
+                    </button>
+                  </td>
+                </ng-container>
+      
+                <ng-container matColumnDef="delete">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Delete </th>
+                  <td mat-cell *matCellDef="let row">
+                    <button mat-icon-button color="warn" (click)="deleteCurriculum(row._id)">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </td>
+                </ng-container>
+      
+      
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                </tr>
+              </table>
+      
+              <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+            </div>
+      
+      
+      
+          </div>
+      
+      
+      
+      
+        </div>
+      </div>
+  </div>
+</div>
+
+
+
+

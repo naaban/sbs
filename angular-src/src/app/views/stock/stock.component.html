@@ -1,0 +1,559 @@
+<div class="animated fadeIn">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            Adding Stock
+          </div>
+          <div class="card-body">
+            <form [formGroup]="form">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group" [ngClass]="displayFieldCss('stockid')">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-vcard"></i></span>
+                      </div>
+                      <input type="text" formControlName="stockid" class="form-control" placeholder="stockid"
+                        formControlName="stockid" tabindex="1">
+                      <app-field-error-display [displayError]="isFieldValid('stockid')" errorMsg="Enter stockid">
+                      </app-field-error-display>
+                    </div>
+                  </div>
+  
+  
+                  <div class="form-group">
+                    <div class="input-group" [ngClass]="displayFieldCss('model_name')">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-book"></i></span>
+                      </div>
+                      <input type="text" formControlName="model_name" class="form-control" placeholder="model_name "
+                        formControlName="model_name" tabindex="1">
+                      <app-field-error-display [displayError]="isFieldValid('model_name')" errorMsg="Enter model_name ">
+                      </app-field-error-display>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <div class="input-group" [ngClass]="displayFieldCss('brand_name')">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-book"></i></span>
+                      </div>
+                      <input type="text" formControlName="brand_name" class="form-control" placeholder="brand_name "
+                        formControlName="brand_name" tabindex="1">
+                      <app-field-error-display [displayError]="isFieldValid('brand_name')" errorMsg="Enter brand_name ">
+                      </app-field-error-display>
+                    </div>
+                  </div>
+  
+  
+                  <div class="form-group">
+                    <div class="input-group" [ngClass]="displayFieldCss('category_type')">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-book"></i></span>
+                      </div>
+                      <select class="form-control" formControlName="category_type" id="sel1" placeholder="category_type">
+                        <option>Category Type</option>
+                        <option value="{{cat.CategoryType}}" *ngFor="let cat of this.category_type">
+                          {{cat.CategoryType}}
+                        </option>
+  
+                      </select>
+                    </div>
+  
+                  </div>
+                  <div class="form-group">
+                      <div class="input-group" [ngClass]="displayFieldCss('product')">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-book"></i></span>
+                        </div>
+                        <select class="form-control" formControlName="product" id="sel1" placeholder="product">
+                          <option>Product</option>
+                          <option value="{{cat.ProductName}}" *ngFor="let cat of this.product">
+                            {{cat.ProductName}}
+                          </option>
+    
+                        </select>
+                      </div>
+    
+                    </div>
+  
+                  <div class="form-group">
+                    <div class="input-group" [ngClass]="displayFieldCss('battery_no')">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-book"></i></span>
+                      </div>
+                      <input type="text" formControlName="battery_no" class="form-control" placeholder="battery_no "
+                        formControlName="battery_no" tabindex="1">
+                      <app-field-error-display [displayError]="isFieldValid('battery_no')" errorMsg="Enter battery_no ">
+                      </app-field-error-display>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group" [ngClass]="displayFieldCss('color')">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-book"></i></span>
+                      </div>
+                      <input type="text" formControlName="color" class="form-control" placeholder="color "
+                        formControlName="color" tabindex="1">
+                      <app-field-error-display [displayError]="isFieldValid('color')" errorMsg="Enter color ">
+                      </app-field-error-display>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group" [ngClass]="displayFieldCss('quantity')">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-book"></i></span>
+                      </div>
+                      <input type="text" formControlName="quantity" class="form-control" placeholder="quantity "
+                        formControlName="quantity" tabindex="1">
+                      <app-field-error-display [displayError]="isFieldValid('quantity')" errorMsg="Enter quantity ">
+                      </app-field-error-display>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group" [ngClass]="displayFieldCss('add_barcode')">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-book"></i></span>
+                      </div>
+                      <input type="text" formControlName="add_barcode" class="form-control" placeholder="add_barcode "
+                        formControlName="add_barcode" tabindex="1">
+                      <app-field-error-display [displayError]="isFieldValid('add_barcode')" errorMsg="Enter add_barcode ">
+                      </app-field-error-display>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group" [ngClass]="displayFieldCss('imei1')">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-book"></i></span>
+                      </div>
+                      <input type="text" formControlName="imei1" class="form-control" placeholder="imei1 "
+                        formControlName="imei1" tabindex="1">
+                      <app-field-error-display [displayError]="isFieldValid('imei1')" errorMsg="Enter imei1 ">
+                      </app-field-error-display>
+                    </div>
+                  </div>
+                </div>
+              
+  
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <div class="input-group" [ngClass]="displayFieldCss('imei2')">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-book"></i></span>
+                    </div>
+                    <input type="text" formControlName="imei2" class="form-control" placeholder="imei2 " formControlName="imei2"
+                      tabindex="1">
+                    <app-field-error-display [displayError]="isFieldValid('imei2')" errorMsg="Enter imei2 ">
+                    </app-field-error-display>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group" [ngClass]="displayFieldCss('dp')">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-book"></i></span>
+                    </div>
+                    <input type="text" formControlName="dp" class="form-control" placeholder="dp " formControlName="dp"
+                      tabindex="1">
+                    <app-field-error-display [displayError]="isFieldValid('dp')" errorMsg="Enter dp ">
+                    </app-field-error-display>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group" [ngClass]="displayFieldCss('lp')">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-book"></i></span>
+                    </div>
+                    <input type="text" formControlName="lp" class="form-control" placeholder="lp " formControlName="lp"
+                      tabindex="1">
+                    <app-field-error-display [displayError]="isFieldValid('lp')" errorMsg="Enter lp ">
+                    </app-field-error-display>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group" [ngClass]="displayFieldCss('sp')">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-book"></i></span>
+                    </div>
+                    <input type="text" formControlName="sp" class="form-control" placeholder="sp " formControlName="sp"
+                      tabindex="1">
+                    <app-field-error-display [displayError]="isFieldValid('sp')" errorMsg="Enter sp ">
+                    </app-field-error-display>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group" [ngClass]="displayFieldCss('cp')">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-book"></i></span>
+                    </div>
+                    <input type="text" formControlName="cp" class="form-control" placeholder="cp " formControlName="cp"
+                      tabindex="1">
+                    <app-field-error-display [displayError]="isFieldValid('cp')" errorMsg="Enter cp ">
+                    </app-field-error-display>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group" [ngClass]="displayFieldCss('stock_status')">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-book"></i></span>
+                    </div>
+                    <input type="text" formControlName="stock_status" class="form-control" placeholder="stock_status "
+                      formControlName="stock_status" tabindex="1">
+                    <app-field-error-display [displayError]="isFieldValid('stock_status')" errorMsg="Enter stock_status ">
+                    </app-field-error-display>
+                  </div>
+                </div>
+  
+                <div class="form-group">
+                  <div class="input-group" [ngClass]="displayFieldCss('gst')">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-book"></i></span>
+                    </div>
+                    <select class="form-control" formControlName="gst" id="sel1" placeholder="gst">
+                      <option>Gst</option>
+                      <option value="{{cat.Percentage}}" *ngFor="let cat of this.gst">
+                        {{cat.Percentage}}
+                      </option>
+  
+                    </select>
+                  </div>
+                </div>
+  
+  
+                <div class="form-group">
+                  <div class="input-group" [ngClass]="displayFieldCss('branch')">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-book"></i></span>
+                    </div>
+                    <select class="form-control" formControlName="branch"id="sel1" placeholder="branch">
+                      <option>Branch</option>
+                      <option value="{{cat.bname}}"*ngFor="let cat of this.branch">
+                        {{cat.bname}}
+                      </option>
+  
+                    </select>
+                  </div>
+                </div>
+  
+  
+  
+                <div class="form-group">
+                  <div class="input-group" [ngClass]="displayFieldCss('add_date')">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-book"></i></span>
+                    </div>
+                    <input type="text" formControlName="add_date" class="form-control" placeholder="add_date "
+                      formControlName="add_date" tabindex="1">
+                    <app-field-error-display [displayError]="isFieldValid('add_date')" errorMsg="Enter add_date ">
+                    </app-field-error-display>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group" [ngClass]="displayFieldCss('remarks')">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-book"></i></span>
+                    </div>
+                    <input type="text" formControlName="remarks" class="form-control" placeholder="remarks "
+                      formControlName="remarks" tabindex="1">
+                    <app-field-error-display [displayError]="isFieldValid('remarks')" errorMsg="Enter remarks ">
+                    </app-field-error-display>
+                  </div>
+                </div>
+  
+              </div>
+  
+  
+  
+  
+  
+              <div class="form-group form-actions">
+                <button type="submit" (click)="onSubmit()" class="btn btn-pill btn-success">Submit</button> &nbsp;
+                <button type="reset" class="btn btn-pill btn-danger">Reset </button>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <!-- <div class="col-sm-8">
+        <div class="card">
+          <div class="card-header">
+            <i class="fa fa-align-justify"></i> Display Curriculum
+          </div>
+          <div class="card-body">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th>Curriculum ID</th>
+                  <th>Curriculum Name</th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let dis of display1">
+                 
+                  <td>{{dis.cid}}</td>
+                  <td>{{dis.curriculumName}}</td>
+                  <td>
+  
+                    <button mat-icon-button (click)="openDialog(dis)" color="primary">
+                      <mat-icon>edit</mat-icon>
+                    </button>
+  
+                  </td>
+                  <td>
+                    <button mat-icon-button color="warn" (click)="deleteCurriculum(dis._id)">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+  
+            <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChanged($event)">
+            </mat-paginator>
+          </div>
+        </div>
+      </div> -->
+  
+  
+     <!-- <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              <i class="fa fa-align-justify"></i> <strong> Display Category</strong>
+        
+              <mat-form-field style="float :right;width: 200px;">
+                <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+              </mat-form-field>
+            </div>
+            <div>
+        
+        
+              <div class="mat-elevation-z8">
+                <table mat-table style="width: 100%;" [dataSource]="dataSource" matSort>
+        
+                 
+                  <ng-container matColumnDef="CategoryID">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> CategoryID </th>
+                    <td mat-cell *matCellDef="let row"> {{row.CategoryID}} </td>
+                  </ng-container>
+        
+                 
+                  <ng-container matColumnDef="CategoryType">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> CategoryType  </th>
+                    <td mat-cell *matCellDef="let row"> {{row.CategoryType}} </td>
+                  </ng-container>
+  
+                  <ng-container matColumnDef="Date">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Date  </th>
+                    <td mat-cell *matCellDef="let row"> {{row.Date}} </td>
+                  </ng-container>
+  
+        
+                    
+        
+                  <ng-container matColumnDef="edit">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Edit </th>
+                    <td mat-cell *matCellDef="let row">
+                      <button mat-icon-button color="primary" (click)="openDialog(row)">
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                    </td>
+                  </ng-container>
+        
+                  <ng-container matColumnDef="delete">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Delete </th>
+                    <td mat-cell *matCellDef="let row">
+                      <button mat-icon-button color="warn" (click)="deleteCategory(row._id)">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                    </td>
+                  </ng-container>
+        
+        
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+                  </tr>
+                </table>
+        
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+              </div>
+        
+        
+        
+            </div>
+        
+        
+        
+        
+          </div>
+        </div>
+    </div>
+  </div>-->
+
+
+  <!-- 
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> Display Student Details
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Student Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Address</th>
+                <th>Curriulum</th>
+                <th>Grade</th>
+                <th>Subject</th>
+                <th>Faculty Name</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let dis of display1">
+               
+                <td>{{dis.username}}</td>
+                <td>{{dis.email}}</td>
+                <td>{{dis.mobile}}</td>
+                <td>{{dis.address}}</td>
+                <td>{{dis.curriculum}}</td>
+                <td>{{dis.grade}}</td>
+                <td>{{dis.subjects}}</td>
+                <td>{{dis.faculty_name}}</td>
+                <td>
+                  <button mat-icon-button (click)="openDialog(dis)" color="primary">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                </td>
+                <td>
+                  <button mat-icon-button color="warn" (click)="deleteStudent(dis._id)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChanged($event)"></mat-paginator>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> <strong> Stock Details</strong>
+  
+        <mat-form-field style="float :right;width: 200px;">
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+      </div>
+      <div>
+  
+  
+        <div class="mat-elevation-z8">
+          <table mat-table class="col-sm-12" [dataSource]="dataSource" matSort>
+  
+  
+            <ng-container matColumnDef="stockid">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> StockID </th>
+              <td mat-cell *matCellDef="let row"> {{row.stockid}} </td>
+            </ng-container>
+  
+  
+            <ng-container matColumnDef="model_name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Model Name </th>
+              <td mat-cell *matCellDef="let row"> {{row.model_name}} </td>
+            </ng-container>
+  
+  
+            <ng-container matColumnDef="brand_name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Brand Name </th>
+              <td mat-cell *matCellDef="let row"> {{row.brand_name}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="category_type">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Category Type </th>
+              <td mat-cell *matCellDef="let row"> {{row.category_type}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="quantity">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Quantity </th>
+              <td mat-cell *matCellDef="let row"> {{row.quantity}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="sp">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Selling Price </th>
+              <td mat-cell *matCellDef="let row"> {{row.sp}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="cp">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Costs Price </th>
+              <td mat-cell *matCellDef="let row"> {{row.cp}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="stock_status">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Stock Status </th>
+              <td mat-cell *matCellDef="let row"> {{row.stock_status}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="gst">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> GST </th>
+              <td mat-cell *matCellDef="let row"> {{row.gst}} </td>
+            </ng-container>
+            <ng-container matColumnDef="branch">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Branch </th>
+              <td mat-cell *matCellDef="let row"> {{row.branch}} </td>
+            </ng-container>
+            <ng-container matColumnDef="edit">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Edit </th>
+              <td mat-cell *matCellDef="let row">
+                <button mat-icon-button color="primary" (click)="openDialog(row)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="delete">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Delete </th>
+              <td mat-cell *matCellDef="let row">
+                <button mat-icon-button color="warn" (click)="deleteStock(row._id)">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+  
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+            </tr>
+          </table>
+  
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+        </div>
+  
+  
+  
+      </div>
+  
+  
+  
+  
+    </div>
+  </div>
+  
+  
+  
+  
+  
